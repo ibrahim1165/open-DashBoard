@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Router, Routes } from "react-router-dom";
 import Layout from "./components/sherd/Layout";
-import Dashboard from "./components/sherd/Dashboard";
 import Products from "./components/Products";
+import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
