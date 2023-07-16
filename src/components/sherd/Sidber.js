@@ -11,11 +11,13 @@ const linkClass =
 
 export default function Sidebar() {
 	return (
-		<div className="bg-neutral-900 w-60 p-3 flex flex-col">
-			<div className="flex items-center gap-2 px-1 py-3">
+		<div className="bg-neutral-900 w-60 p-3 flex flex-col lg:block hidden">
+			<Link to="/" className="flex items-center gap-2 px-1 py-3 hover:no-underline">
+
 				<FcBullish fontSize={24} />
 				<span className="text-neutral-200 text-lg">OpenShop</span>
-			</div>
+				
+				</Link>
 			<div className="py-8 flex flex-1 flex-col gap-0.5">
 				{DASHBOARD_SIDEBAR_LINKS.map((link) => (
 					<SidebarLink key={link.key} link={link} />

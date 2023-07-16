@@ -49,7 +49,7 @@ const recentOrderData = [
 		id: '4',
 		product_id: '8763',
 		customer_id: '09832',
-		customer_name: 'Anthony Fry',
+		customer_name: 'Tom herry',
 		order_date: '2022-05-14T03:24:00',
 		order_total: '$876.00',
 		current_order_status: 'OUT_FOR_DELIVERY',
@@ -57,6 +57,46 @@ const recentOrderData = [
 	},
 	{
 		id: '5',
+		product_id: '8763',
+		customer_id: '09832',
+		customer_name: 'Jakshon',
+		order_date: '2022-05-14T03:24:00',
+		order_total: '$876.00',
+		current_order_status: 'DELIVERED',
+		shipment_address: 'San Mateo, CA 94403'
+	},
+	{
+		id: '6',
+		product_id: '8763',
+		customer_id: '09832',
+		customer_name: 'Anthony',
+		order_date: '2022-05-14T03:24:00',
+		order_total: '$876.00',
+		current_order_status: 'SHIPPED',
+		shipment_address: 'San Mateo, CA 94403'
+	},
+	{
+		id: '7',
+		product_id: '8763',
+		customer_id: '09832',
+		customer_name: 'Fairo',
+		order_date: '2022-05-14T03:24:00',
+		order_total: '$876.00',
+		current_order_status: 'DELIVERED',
+		shipment_address: 'San Mateo, CA 94403'
+	},
+	{
+		id: '8',
+		product_id: '8763',
+		customer_id: '09832',
+		customer_name: 'Jhon De',
+		order_date: '2022-05-14T03:24:00',
+		order_total: '$876.00',
+		current_order_status: 'OUT_FOR_DELIVERY',
+		shipment_address: 'San Mateo, CA 94403'
+	},
+	{
+		id: '9',
 		product_id: '5627',
 		customer_id: '97632',
 		customer_name: 'Ryan Carroll',
@@ -71,8 +111,8 @@ export default function RecentOrders() {
 	return (
 		<div className="bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 flex-1">
 			<strong className="text-gray-700 font-medium">Recent Orders</strong>
-			<div className="border-x border-gray-200 rounded-sm mt-3">
-				<table className="w-full text-gray-700">
+			<div className="border-x w-96 lg:w-full border-gray-200 lg:rounded-sm lg:mt-3 overflow-x-auto">
+				<table className="lg:w-full text-gray-700 table table-xs">
 					<thead>
 						<tr>
 							<th>ID</th>
