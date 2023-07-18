@@ -13,6 +13,8 @@ import HelpAndSupport from "./components/HelpAndSupport";
 function App() {
   return (
     <div>
+
+
       <Routes>
 
 
@@ -20,12 +22,12 @@ function App() {
           <Route index element={<Dashboard />} />
           <Route path="/product" element={<Products />} />
           <Route path="/messages" element={<Messages />} />
-          <Route path="/transactions" element={<Transaction/>} />
+          <Route path="/transactions" element={<Transaction />} />
           <Route path="/orders" element={<Order />} />
           <Route path="/customers" element={<Customar />} />
           <Route path="/settings" element={<Setteing />} />
           <Route path="/support" element={<HelpAndSupport />} />
-         
+
         </Route>
 
 

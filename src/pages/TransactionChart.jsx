@@ -66,7 +66,7 @@ const data = [
 
 export default function TransactionChart() {
 	return (
-		<div className="h-[22rem] w-96 bg-white p-4 rounded-sm border border-gray-200 flex flex-col flex-1">
+		<div className="h-[22rem] w-80 bg-white p-4 rounded-sm border border-gray-200 flex flex-col flex-1">
 			<strong className="text-gray-700 font-medium">Transactions</strong>
 			<div className="mt-3 lg:w-full flex-1 text-xs">
 				<ResponsiveContainer width="100%" height="100%">

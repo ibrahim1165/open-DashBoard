@@ -1,12 +1,12 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState } from 'react'
 import { Menu, Popover, Transition } from '@headlessui/react'
-import { HiOutlineBell, HiOutlineSearch, HiOutlineChatAlt } from 'react-icons/hi'
+import { HiOutlineBell, HiOutlineSearch, HiOutlineChatAlt, HiMenuAlt3 } from 'react-icons/hi'
 import { useNavigate } from 'react-router-dom'
 import classNames from 'classnames'
 
 export default function Header() {
 	const navigate = useNavigate()
-
+	const [open, setOpen] = useState(true);
 	return (
 		<div className="bg-white h-16 px-4 flex items-center border-b border-gray-200 lg:justify-between">
 			<div className="relative">

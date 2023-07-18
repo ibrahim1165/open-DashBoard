@@ -24,7 +24,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
 
 export default function BuyerProfilePieChart() {
 	return (
-		<div className="lg:w-[20rem] w-96  lg:h-[22rem] bg-white p-4 rounded-sm border border-gray-200 flex flex-col">
+		<div className="lg:w-[20rem] w-80  lg:h-[22rem] bg-white p-4 rounded-sm border border-gray-200 flex flex-col">
 			<strong className="text-gray-700 font-medium">Buyer Profile</strong>
 			<div className="lg:mt-3 lg:w-full lg:flex-1 text-xs">
 				<ResponsiveContainer width="100%" height="100%">

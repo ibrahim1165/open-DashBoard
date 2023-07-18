@@ -49,7 +49,7 @@ const popularProducts = [
 
 function PopularProducts() {
 	return (
-		<div className="lg:w-[20rem] md:w-[96%] w-96 bg-white p-4 rounded-sm border border-gray-200">
+		<div className="lg:w-[20rem] md:w-[96%] w-80 bg-white p-4 rounded-sm border border-gray-200">
 			<strong className="text-gray-700 font-medium">Popular Products</strong>
 			<div className="mt-4 flex flex-col gap-3">
 				{popularProducts.map((product) => (
