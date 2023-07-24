@@ -61,9 +61,10 @@ import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
 import { FiMessageSquare, FiFolder, FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { FcBullish } from 'react-icons/fc'
+import { FaComputer} from "react-icons/fa6"
 const Home = () => {
   const menus = [
-    { name: "OpenShop", link: "/", icon: FcBullish },
+    // { name: "ComputerHouse", link: "/", icon: FaComputer },
     { name: "Dashboard", link: "/", icon: HiOutlineViewGrid },
     { name: "Products", link: "/product", icon: HiOutlineCube },
     { name: "Orders", link: "/orders", icon: HiOutlineShoppingCart },
@@ -83,18 +84,32 @@ const Home = () => {
         } duration-500 text-gray-100 px-4`}
       >
 		
-        <div className="py-3 flex justify-end">
+        <div className="py-3 flex justify-center ">
+          <div className={ `text-secondary flex justify-center pr-10 ${
+          open ? "w-72" : "hidden"
+        } `}>
+            <div className="px-3">
+              <FaComputer size={26}
+            className="cursor-pointer"/>
+            </div>
+              <h2>
+            <p className="text-lg">ComputerHouse</p>
+              </h2>
+          </div>
+          <div>
+
           <HiMenuAlt3
             size={26}
             className="cursor-pointer"
             onClick={() => setOpen(!open)}
           />
+          </div>
         </div>
 		{/* <div className="lg:flex items-center gap-2 px-1 py-8">
 				<FcBullish fontSize={24} />
  				<span className="text-neutral-200 text-lg">OpenShop</span>
  			</div> */}
-        <div className="mt-4 flex flex-col gap-4 relative ">
+        <div className="mt-4 flex flex-col gap-4 relative py-8">
           {menus?.map((menu, i) => (
             <Link
               to={menu?.link}
