@@ -65,14 +65,14 @@ import { FaComputer} from "react-icons/fa6"
 const Home = () => {
   const menus = [
     // { name: "ComputerHouse", link: "/", icon: FaComputer },
-    { name: "Dashboard", link: "/", icon: HiOutlineViewGrid },
-    { name: "Products", link: "/product", icon: HiOutlineCube },
-    { name: "Orders", link: "/orders", icon: HiOutlineShoppingCart },
-    { name: "Customers", link: "/customers", icon: HiOutlineUsers, margin: true },
-    { name: "Transactions", link: "/transactions", icon: HiOutlineDocumentText },
-    { name: "messages", link: "/messages", icon: HiOutlineAnnotation  },
-    { name: "Settings", link: "/settings", icon: HiOutlineCog, margin: true },
-    { name: "Help & Support", link: "/support", icon: HiOutlineQuestionMarkCircle },
+    { name: "Dashboard", link: "/home", icon: HiOutlineViewGrid },
+    { name: "Products", link: "/home/product", icon: HiOutlineCube },
+    { name: "Orders", link: "/home/orders", icon: HiOutlineShoppingCart },
+    { name: "Customers", link: "/home/customers", icon: HiOutlineUsers, margin: true },
+    { name: "Transactions", link: "/home/transactions", icon: HiOutlineDocumentText },
+    { name: "messages", link: "/home/messages", icon: HiOutlineAnnotation  },
+    { name: "Settings", link: "/home/settings", icon: HiOutlineCog, margin: true },
+    { name: "Help & Support", link: "/home/support", icon: HiOutlineQuestionMarkCircle },
   ];
   const [open, setOpen] = useState(true);
   return (

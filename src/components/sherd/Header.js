@@ -3,9 +3,17 @@ import { Menu, Popover, Transition } from '@headlessui/react'
 import { HiOutlineBell, HiOutlineSearch, HiOutlineChatAlt, HiMenuAlt3 } from 'react-icons/hi'
 import { useNavigate } from 'react-router-dom'
 import classNames from 'classnames'
-
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init'
+import { signOut } from 'firebase/auth'
 export default function Header() {
-	const navigate = useNavigate()
+	const navigate = useNavigate();
+	const [user] = useAuthState(auth);
+	const singout =()=>{
+	  signOut(auth)
+	  navigate('/');
+	  
+  }
 	const [open, setOpen] = useState(true);
 	return (
 		<div className="bg-white h-16 px-4 flex items-center border-b border-gray-200 lg:justify-between">
@@ -103,7 +111,7 @@ export default function Header() {
 							<Menu.Item>
 								{({ active }) => (
 									<div
-										onClick={() => navigate('/profile')}
+										onClick={() => navigate('/home/profile')}
 										className={classNames(
 											active && 'bg-gray-100',
 											'active:bg-gray-200 rounded-sm px-4 py-2 text-gray-700 cursor-pointer focus:bg-gray-200'
@@ -116,7 +124,7 @@ export default function Header() {
 							<Menu.Item>
 								{({ active }) => (
 									<div
-										onClick={() => navigate('/settings')}
+										onClick={() => navigate('/home/settings')}
 										className={classNames(
 											active && 'bg-gray-100',
 											'active:bg-gray-200 rounded-sm px-4 py-2 text-gray-700 cursor-pointer focus:bg-gray-200'
@@ -128,13 +136,17 @@ export default function Header() {
 							</Menu.Item>
 							<Menu.Item>
 								{({ active }) => (
+									
 									<div
 										className={classNames(
 											active && 'bg-gray-100',
 											'active:bg-gray-200 rounded-sm px-4 py-2 text-gray-700 cursor-pointer focus:bg-gray-200'
 										)}
 									>
+										<p onClick={singout}>
 										Sign out
+										</p>
+										
 									</div>
 								)}
 							</Menu.Item>
