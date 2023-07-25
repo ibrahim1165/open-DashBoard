@@ -12,6 +12,7 @@ import HelpAndSupport from "./components/HelpAndSupport";
 import Login from "./components/singup/Login";
 import NotFound from "./components/NotFound";
 import CreatedAccount from "./components/singup/CreatedAccount";
+import RequerAuth from "./components/singup/RequerAuth";
 
 function App() {
   return (
@@ -20,7 +21,11 @@ function App() {
       <Routes>
         <Route path="/login" element={<CreatedAccount />} />
         <Route path="/" element={<Login />} />
-        <Route path="/home" element={<Layout />}>
+        <Route path="/home" element={
+          <RequerAuth>
+            <Layout />
+          </RequerAuth>
+        }>
           <Route index element={<Dashboard />} />
           <Route path="/home/product" element={<Products />} />
           <Route path="/home/messages" element={<Messages />} />
@@ -31,9 +36,9 @@ function App() {
           <Route path="/home/support" element={<HelpAndSupport />} />
           <Route path="*" element={<NotFound />}></Route>
         </Route>
-          <Route path="*" element={<NotFound />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
-      
+
     </div>
   );
 }
