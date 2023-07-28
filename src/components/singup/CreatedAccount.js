@@ -46,7 +46,7 @@ const CreatedAccount = () => {
               <h2 className="text-center text-2xl font-bold">Sign Up</h2>
               <form onSubmit={handleSubmit(onSubmit)} >
 
-               <div className='grid lg:grid-cols-2 grid-cols-1 mx-auto lg:px-8 justify-center'>
+               <div className='grid lg:grid-cols-2 grid-cols-1 mx-auto lg:px-10 lg:pl-28 justify-center items-center'>
                <div className="form-control w-full max-w-xs">
                   <label className="label">
                     <span className="label-text">Name</span>

@@ -42,7 +42,7 @@ const Login = () => {
           <h2 className="text-center text-2xl font-bold">Login</h2>
           <form onSubmit={handleSubmit(onSubmit)} >
 
-           <div className='grid lg:grid-cols-2 grid-cols-1 mx-auto lg:px-8 justify-center'>
+           <div className='grid lg:grid-cols-2 grid-cols-1 mx-auto lg:px-8 justify-center lg:pl-28'>
 
             <div className="form-control w-full max-w-xs">
               <label className="label">
