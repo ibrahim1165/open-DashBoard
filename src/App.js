@@ -13,11 +13,9 @@ import Login from "./components/singup/Login";
 import NotFound from "./components/NotFound";
 import CreatedAccount from "./components/singup/CreatedAccount";
 import RequerAuth from "./components/singup/RequerAuth";
-
 function App() {
   return (
     <div>
-
       <Routes>
         <Route path="/login" element={<CreatedAccount />} />
         <Route path="/" element={<Login />} />
@@ -38,7 +36,6 @@ function App() {
         </Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
-
     </div>
   );
 }
