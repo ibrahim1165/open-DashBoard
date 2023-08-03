@@ -13,6 +13,7 @@ import Login from "./components/singup/Login";
 import NotFound from "./components/NotFound";
 import CreatedAccount from "./components/singup/CreatedAccount";
 import RequerAuth from "./components/singup/RequerAuth";
+import OrderInput from "./components/OrderInput";
 function App() {
   return (
     <div>
@@ -26,6 +27,7 @@ function App() {
         }>
           <Route index element={<Dashboard />} />
           <Route path="/home/product" element={<Products />} />
+          <Route path="/home/product/order" element={<OrderInput/>} />
           <Route path="/home/messages" element={<Messages />} />
           <Route path="/home/transactions" element={<Transaction />} />
           <Route path="/home/orders" element={<Order />} />

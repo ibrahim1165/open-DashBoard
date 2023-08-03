@@ -57,7 +57,9 @@ const Products = () => {
                   </td>
 								<td className='text-sm'>{order.description}</td>
 								<td>
-                  <button className='btn btn-primary'>Order</button>
+                  <button>
+					<Link  className='btn btn-primary hover:no-underline ' to='/home/product/order'>Order</Link>
+					</button>
                 </td>
 							</tr>
 						))}
